@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>para ángel ♡</title>
+<title>para ángel 🩵</title>
 
 <style>
+
+/* =====================================================
+FUENTES
+===================================================== */
+
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap');
+
+
+/* =====================================================
+CONFIGURACIÓN GENERAL
+===================================================== */
 
 * {
 box-sizing: border-box;
@@ -20,325 +32,964 @@ scroll-behavior: smooth;
 }
 
 body {
-background: #fff7fb;
-color: #4a3942;
+background: #fcf8ff;
+color: #473d4b;
 font-family: 'Poppins', sans-serif;
 overflow-x: hidden;
 }
 
-/* CORAZONES FLOTANDO */
-
-.heart {
-position: fixed;
-bottom: -30px;
-font-size: 18px;
-opacity: 0.45;
-animation: floatUp 8s linear infinite;
-pointer-events: none;
-z-index: 0;
+button {
+font-family: inherit;
 }
 
-.heart:nth-child(1) {
+
+/* =====================================================
+FONDO
+===================================================== */
+
+body::before {
+content: "";
+position: fixed;
+inset: 0;
+
+background:
+radial-gradient(circle at 10% 10%, rgba(221, 194, 255, .25), transparent 30%),
+radial-gradient(circle at 90% 80%, rgba(190, 220, 255, .25), transparent 30%);
+
+pointer-events: none;
+z-index: -1;
+}
+
+
+/* =====================================================
+CORAZONES FLOTANTES
+===================================================== */
+
+.floating-heart {
+position: fixed;
+bottom: -30px;
+
+color: #a88bc2;
+opacity: .35;
+
+animation: floatHeart 9s linear infinite;
+
+pointer-events: none;
+z-index: 20;
+}
+
+.floating-heart:nth-child(1) {
 left: 10%;
 animation-delay: 0s;
 }
 
-.heart:nth-child(2) {
+.floating-heart:nth-child(2) {
 left: 30%;
-animation-delay: 2s;
+animation-delay: 3s;
 }
 
-.heart:nth-child(3) {
+.floating-heart:nth-child(3) {
 left: 55%;
-animation-delay: 4s;
+animation-delay: 5s;
 }
 
-.heart:nth-child(4) {
+.floating-heart:nth-child(4) {
 left: 80%;
 animation-delay: 1s;
 }
 
-@keyframes floatUp {
+@keyframes floatHeart {
+
 0% {
-transform: translateY(0) scale(1);
+transform: translateY(0) rotate(0deg);
 opacity: 0;
 }
 
 20% {
-opacity: 0.5;
+opacity: .45;
 }
 
 100% {
-transform: translateY(-110vh) scale(1.4);
+transform: translateY(-110vh) rotate(25deg);
 opacity: 0;
 }
+
 }
 
-/* PORTADA */
+
+/* =====================================================
+PORTADA
+===================================================== */
 
 .hero {
+
 min-height: 100vh;
+
 display: flex;
 align-items: center;
 justify-content: center;
+
 text-align: center;
-padding: 40px 25px;
+
+padding: 30px;
+
 position: relative;
+
 background:
-radial-gradient(circle at top left, #ffdce9 0%, transparent 35%),
-radial-gradient(circle at bottom right, #f5d9ff 0%, transparent 35%),
-#fff7fb;
+radial-gradient(circle at top left, #eadbff, transparent 40%),
+radial-gradient(circle at bottom right, #dceeff, transparent 40%),
+#fcf8ff;
+
 }
 
 .hero-content {
-max-width: 800px;
-z-index: 1;
+max-width: 720px;
 }
 
-.small-text {
-font-size: 14px;
-letter-spacing: 3px;
+.eyebrow {
+
+font-size: 12px;
+
+letter-spacing: 4px;
+
 text-transform: uppercase;
-color: #a76d84;
-margin-bottom: 18px;
-}
 
-h1 {
-font-family: 'DM Serif Display', serif;
-font-size: clamp(60px, 13vw, 120px);
-font-weight: 400;
-line-height: 0.95;
-color: #533944;
+color: #8f78a3;
+
 margin-bottom: 25px;
+
 }
 
-.hero p {
-font-size: 17px;
+.hero h1 {
+
+font-family: 'DM Serif Display', serif;
+
+font-size: clamp(70px, 16vw, 135px);
+
+font-weight: 400;
+
+line-height: .9;
+
+color: #403548;
+
+}
+
+.hero-description {
+
+max-width: 540px;
+
+margin: 30px auto;
+
+line-height: 1.9;
+
+color: #716577;
+
+}
+
+.start-button {
+
+border: none;
+
+background: #544060;
+
+color: white;
+
+padding: 15px 30px;
+
+border-radius: 100px;
+
+cursor: pointer;
+
+font-size: 14px;
+
+transition: .3s;
+
+box-shadow: 0 12px 30px rgba(84,64,96,.2);
+
+}
+
+.start-button:hover {
+
+transform: translateY(-3px);
+
+box-shadow: 0 16px 35px rgba(84,64,96,.28);
+
+}
+
+#introMessage {
+
+margin-top: 25px;
+
+display: none;
+
+color: #806b8b;
+
 line-height: 1.8;
-max-width: 580px;
-margin: auto;
-color: #755d67;
+
 }
 
-.scroll {
-display: inline-block;
-margin-top: 45px;
-color: #9b687e;
-text-decoration: none;
-font-size: 13px;
-letter-spacing: 2px;
-animation: bounce 2s infinite;
-}
 
-@keyframes bounce {
-0%, 100% {
-transform: translateY(0);
-}
-
-50% {
-transform: translateY(7px);
-}
-}
-
-/* SECCIONES */
+/* =====================================================
+SECCIONES
+===================================================== */
 
 section {
-padding: 100px 25px;
+
+padding: 100px 22px;
+
 position: relative;
-z-index: 1;
+
 }
 
 .container {
+
 max-width: 950px;
+
 margin: auto;
+
 }
 
 .section-title {
-text-align: center;
+
 font-family: 'DM Serif Display', serif;
-font-size: 50px;
+
+font-size: clamp(42px, 8vw, 65px);
+
 font-weight: 400;
-color: #533944;
-margin-bottom: 20px;
-}
 
-.section-subtitle {
 text-align: center;
+
+color: #44374b;
+
+margin-bottom: 18px;
+
+}
+
+.section-description {
+
 max-width: 600px;
+
+text-align: center;
+
 margin: 0 auto 55px;
-color: #816a73;
+
 line-height: 1.8;
+
+color: #796c80;
+
 }
 
-/* CARTA */
 
-.letter-section {
-background: #fff;
+/* =====================================================
+TARJETAS DE GUSTOS
+===================================================== */
+
+.likes-grid {
+
+display: grid;
+
+grid-template-columns: repeat(3, 1fr);
+
+gap: 18px;
+
 }
 
-.letter {
-max-width: 720px;
-margin: auto;
-background: #fffafc;
-padding: 55px;
+.like-card {
+
+background: rgba(255,255,255,.75);
+
+border: 1px solid #eee3f4;
+
 border-radius: 25px;
-box-shadow: 0 15px 45px rgba(113, 74, 91, 0.10);
-border: 1px solid #f4dfe8;
-line-height: 2;
-font-size: 16px;
+
+padding: 30px 20px;
+
+text-align: center;
+
+cursor: pointer;
+
+transition: .35s;
+
+box-shadow: 0 10px 30px rgba(78,58,90,.06);
+
 }
 
-.letter p {
-margin-bottom: 22px;
+.like-card:hover {
+
+transform: translateY(-7px);
+
+box-shadow: 0 18px 40px rgba(78,58,90,.12);
+
 }
 
-.signature {
+.like-icon {
+
+font-size: 42px;
+
+margin-bottom: 15px;
+
+}
+
+.like-card h3 {
+
+font-weight: 500;
+
+margin-bottom: 8px;
+
+}
+
+.like-card p {
+
+font-size: 13px;
+
+line-height: 1.7;
+
+color: #806f87;
+
+}
+
+
+/* =====================================================
+CINE
+===================================================== */
+
+.cinema {
+
+background: #17141c;
+
+color: white;
+
+border-radius: 30px;
+
+padding: 55px 30px;
+
+text-align: center;
+
+box-shadow: 0 20px 50px rgba(20,15,25,.2);
+
+}
+
+.cinema small {
+
+letter-spacing: 3px;
+
+color: #cfc4d8;
+
+}
+
+.cinema h3 {
+
 font-family: 'DM Serif Display', serif;
-font-size: 32px;
-color: #9b6179;
-margin-top: 30px;
+
+font-size: 48px;
+
+font-weight: 400;
+
+margin: 20px 0;
+
 }
 
-/* GALERÍA */
+.ticket {
 
-.gallery-section {
-background: #fff7fb;
+display: inline-block;
+
+margin-top: 20px;
+
+padding: 15px 25px;
+
+border: 1px dashed #cbbbd4;
+
+border-radius: 12px;
+
+background: rgba(255,255,255,.05);
+
+cursor: pointer;
+
+transition: .3s;
+
 }
+
+.ticket:hover {
+
+background: rgba(255,255,255,.1);
+
+transform: scale(1.03);
+
+}
+
+#movieSecret {
+
+display: none;
+
+margin-top: 25px;
+
+color: #ded3e5;
+
+line-height: 1.8;
+
+}
+
+
+/* =====================================================
+SUSHI
+===================================================== */
+
+.sushi-grid {
+
+display: flex;
+
+justify-content: center;
+
+gap: 20px;
+
+flex-wrap: wrap;
+
+}
+
+.sushi {
+
+width: 90px;
+
+height: 90px;
+
+border-radius: 50%;
+
+background: #fff;
+
+border: 1px solid #eee0e9;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+font-size: 40px;
+
+cursor: pointer;
+
+transition: .3s;
+
+box-shadow: 0 10px 25px rgba(80,50,70,.07);
+
+}
+
+.sushi:hover {
+
+transform: translateY(-8px) rotate(5deg);
+
+}
+
+#sushiMessage {
+
+text-align: center;
+
+margin-top: 35px;
+
+min-height: 25px;
+
+color: #816c7b;
+
+font-style: italic;
+
+}
+
+
+/* =====================================================
+ARIANA
+===================================================== */
+
+.music-card {
+
+max-width: 600px;
+
+margin: auto;
+
+background: linear-gradient(135deg, #eee5ff, #f8f2ff);
+
+border-radius: 30px;
+
+padding: 35px;
+
+text-align: center;
+
+box-shadow: 0 15px 40px rgba(95,70,120,.1);
+
+}
+
+.record {
+
+width: 120px;
+
+height: 120px;
+
+margin: auto;
+
+border-radius: 50%;
+
+background:
+
+repeating-radial-gradient(
+
+circle,
+
+#26202d 0px,
+
+#26202d 4px,
+
+#111 5px,
+
+#111 8px
+
+);
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+animation: spin 7s linear infinite;
+
+}
+
+.record-center {
+
+width: 35px;
+
+height: 35px;
+
+border-radius: 50%;
+
+background: #d6b9ff;
+
+}
+
+@keyframes spin {
+
+from {
+transform: rotate(0);
+}
+
+to {
+transform: rotate(360deg);
+}
+
+}
+
+.music-card h3 {
+
+font-family: 'DM Serif Display', serif;
+
+font-size: 35px;
+
+margin: 25px 0 10px;
+
+}
+
+.music-card p {
+
+color: #76657f;
+
+line-height: 1.8;
+
+}
+
+
+/* =====================================================
+TATUAJES
+===================================================== */
+
+.tattoo-area {
+
+display: grid;
+
+grid-template-columns: repeat(3, 1fr);
+
+gap: 20px;
+
+}
+
+.tattoo {
+
+background: #fff;
+
+border-radius: 25px;
+
+padding: 35px 20px;
+
+text-align: center;
+
+border: 1px solid #eee5ef;
+
+cursor: pointer;
+
+transition: .3s;
+
+}
+
+.tattoo:hover {
+
+transform: rotate(-2deg) translateY(-5px);
+
+}
+
+.tattoo-symbol {
+
+font-size: 48px;
+
+margin-bottom: 15px;
+
+}
+
+.tattoo-message {
+
+display: none;
+
+margin-top: 15px;
+
+font-size: 13px;
+
+line-height: 1.7;
+
+color: #7a687f;
+
+}
+
+
+/* =====================================================
+BTS
+===================================================== */
+
+.bts-section {
+
+background: #241c2c;
+
+color: white;
+
+}
+
+.bts-section .section-title {
+
+color: white;
+
+}
+
+.bts-section .section-description {
+
+color: #c7bbcD;
+
+}
+
+.purple-heart {
+
+width: 110px;
+
+height: 110px;
+
+margin: 30px auto;
+
+border-radius: 50%;
+
+background: #8061a4;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+font-size: 45px;
+
+cursor: pointer;
+
+transition: .4s;
+
+box-shadow: 0 0 0 rgba(128,97,164,0);
+
+}
+
+.purple-heart:hover {
+
+transform: scale(1.08);
+
+box-shadow: 0 0 45px rgba(180,150,220,.35);
+
+}
+
+#btsSecret {
+
+display: none;
+
+text-align: center;
+
+max-width: 550px;
+
+margin: 25px auto 0;
+
+line-height: 1.9;
+
+color: #ddd1e8;
+
+}
+
+
+/* =====================================================
+GALERÍA
+===================================================== */
 
 .gallery {
+
 display: grid;
+
 grid-template-columns: repeat(3, 1fr);
-gap: 18px;
+
+gap: 15px;
+
 }
 
 .photo {
-aspect-ratio: 1 / 1;
-border-radius: 20px;
+
+aspect-ratio: 1;
+
 overflow: hidden;
-background: #f5dfe8;
-box-shadow: 0 10px 25px rgba(113, 74, 91, 0.08);
+
+border-radius: 20px;
+
+background: #eee3f1;
+
 }
 
 .photo img {
+
 width: 100%;
+
 height: 100%;
+
 object-fit: cover;
-display: block;
-transition: transform 0.5s ease;
+
+transition: .5s;
+
 }
 
 .photo:hover img {
-transform: scale(1.06);
+
+transform: scale(1.07);
+
 }
 
-/* RECUERDOS */
 
-.memories {
-display: grid;
-grid-template-columns: repeat(2, 1fr);
-gap: 25px;
-}
+/* =====================================================
+AGRADECIMIENTO
+===================================================== */
 
-.memory {
-background: white;
-border-radius: 25px;
-padding: 35px;
-border: 1px solid #f1dfe6;
-box-shadow: 0 12px 35px rgba(113, 74, 91, 0.07);
-}
+.thanks {
 
-.memory-number {
-font-family: 'DM Serif Display', serif;
-font-size: 38px;
-color: #c0849b;
-margin-bottom: 10px;
-}
+max-width: 720px;
 
-.memory h3 {
-font-size: 19px;
-font-weight: 500;
-margin-bottom: 12px;
-color: #593f49;
-}
-
-.memory p {
-color: #806c74;
-line-height: 1.8;
-font-size: 14px;
-}
-
-/* RAZONES */
-
-.reasons-section {
-background: #fff;
-}
-
-.reasons {
-max-width: 700px;
 margin: auto;
-}
 
-.reason {
-display: flex;
-gap: 20px;
-align-items: flex-start;
-padding: 22px 0;
-border-bottom: 1px solid #f0dfe6;
-}
-
-.reason:last-child {
-border-bottom: none;
-}
-
-.reason-heart {
-font-size: 22px;
-flex-shrink: 0;
-}
-
-.reason p {
-line-height: 1.8;
-color: #725d66;
-}
-
-/* FINAL */
-
-.final-section {
-min-height: 80vh;
-display: flex;
-align-items: center;
-justify-content: center;
 text-align: center;
+
+}
+
+.thanks-text {
+
+background: white;
+
+border-radius: 30px;
+
+padding: 45px 35px;
+
+line-height: 2;
+
+color: #6f6075;
+
+box-shadow: 0 15px 45px rgba(80,60,90,.07);
+
+}
+
+.thanks-text strong {
+
+color: #514158;
+
+}
+
+
+/* =====================================================
+SNOOPY / EASTER EGG
+===================================================== */
+
+.snoopy {
+
+position: fixed;
+
+right: 18px;
+
+bottom: 18px;
+
+font-size: 35px;
+
+cursor: pointer;
+
+z-index: 50;
+
+transition: .3s;
+
+filter: drop-shadow(0 5px 5px rgba(0,0,0,.08));
+
+}
+
+.snoopy:hover {
+
+transform: scale(1.15) rotate(-5deg);
+
+}
+
+#snoopyMessage {
+
+position: fixed;
+
+right: 20px;
+
+bottom: 70px;
+
+max-width: 250px;
+
+background: white;
+
+padding: 15px 18px;
+
+border-radius: 18px;
+
+box-shadow: 0 10px 35px rgba(0,0,0,.12);
+
+display: none;
+
+z-index: 51;
+
+font-size: 13px;
+
+line-height: 1.6;
+
+}
+
+
+/* =====================================================
+CONFESIÓN FINAL
+===================================================== */
+
+.final {
+
+min-height: 100vh;
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+text-align: center;
+
 background:
-radial-gradient(circle at center, #f7dce8 0%, #fff7fb 60%);
+
+radial-gradient(circle at center, #e8ddff, transparent 65%),
+
+#fcf8ff;
+
 }
 
-.final-content {
+.locked {
+
 max-width: 700px;
+
+margin: auto;
+
 }
 
-.final-content h2 {
-font-family: 'DM Serif Display', serif;
-font-size: clamp(48px, 9vw, 85px);
-font-weight: 400;
-color: #533944;
+.lock {
+
+font-size: 45px;
+
 margin-bottom: 25px;
+
 }
 
-.final-content p {
-line-height: 1.9;
-color: #765f68;
-font-size: 16px;
+.final-message {
+
+display: none;
+
+animation: appear 1.5s ease;
+
 }
 
-.big-heart {
+@keyframes appear {
+
+from {
+
+opacity: 0;
+
+transform: translateY(20px);
+
+}
+
+to {
+
+opacity: 1;
+
+transform: translateY(0);
+
+}
+
+}
+
+.final-message h2 {
+
+font-family: 'DM Serif Display', serif;
+
+font-size: clamp(48px, 9vw, 85px);
+
+font-weight: 400;
+
+color: #44374b;
+
+margin-bottom: 30px;
+
+}
+
+.final-message p {
+
+line-height: 2;
+
+color: #6e6074;
+
+margin-bottom: 18px;
+
+}
+
+.confession {
+
+font-family: 'DM Serif Display', serif;
+
+font-size: 38px;
+
+color: #705484;
+
+margin: 35px 0;
+
+}
+
+.blue-heart {
+
 font-size: 55px;
-margin-top: 35px;
-display: inline-block;
+
 animation: heartbeat 1.5s infinite;
+
 }
 
 @keyframes heartbeat {
-0%, 100% {
+
+0%,100% {
 transform: scale(1);
 }
 
@@ -351,274 +1002,217 @@ transform: scale(1);
 }
 
 45% {
-transform: scale(1.12);
-}
-}
-
-footer {
-text-align: center;
-padding: 25px;
-background: #fff7fb;
-color: #a1848f;
-font-size: 12px;
-letter-spacing: 1px;
+transform: scale(1.1);
 }
 
-/* RESPONSIVE */
+}
+
+
+/* =====================================================
+RESPONSIVE
+===================================================== */
 
 @media (max-width: 700px) {
 
-section {
-padding: 75px 20px;
+.likes-grid {
+
+grid-template-columns: repeat(2, 1fr);
+
 }
 
-.letter {
-padding: 30px 25px;
+.tattoo-area {
+
+grid-template-columns: 1fr;
+
 }
 
 .gallery {
+
 grid-template-columns: repeat(2, 1fr);
+
 }
 
-.memories {
-grid-template-columns: 1fr;
+section {
+
+padding: 75px 18px;
+
 }
 
-.section-title {
-font-size: 42px;
+.thanks-text {
+
+padding: 30px 22px;
+
 }
 
-.hero p {
-font-size: 15px;
 }
-}
+
 </style>
+
 </head>
+
 
 <body>
 
+
 <!-- CORAZONES -->
 
-<div class="heart">♡</div>
-<div class="heart">♡</div>
-<div class="heart">♡</div>
-<div class="heart">♡</div>
+<div class="floating-heart">♡</div>
+<div class="floating-heart">♡</div>
+<div class="floating-heart">♡</div>
+<div class="floating-heart">♡</div>
 
 
-<!-- PORTADA -->
+<!-- =====================================================
+PORTADA
+===================================================== -->
 
 <section class="hero">
 
 <div class="hero-content">
 
-<div class="small-text">
-una pequeña cosa para ti
+<div class="eyebrow">
+para una persona muy especial
 </div>
 
 <h1>ángel</h1>
 
-<p>
-hice este pequeño rincón porque hay personas que merecen
-tener un lugar bonito donde recordar todo lo que significan.
+<p class="hero-description">
+
+esto probablemente no tiene ningún sentido.
+
+<br><br>
+
+pero si eres tú...
+
+<br>
+
+toca aquí.
+
 </p>
 
-<a href="#carta" class="scroll">
-↓ sigue leyendo
-</a>
+<button class="start-button" onclick="startPage()">
+
+entrar ♡
+
+</button>
+
+<p id="introMessage">
+
+ah, sí.
+
+<br>
+
+eras tú.
+
+🩵
+
+</p>
 
 </div>
 
 </section>
 
 
-<!-- CARTA -->
-
-<section class="letter-section" id="carta">
-
-<div class="container">
-
-<h2 class="section-title">
-para ti
-</h2>
-
-<p class="section-subtitle">
-probablemente nunca encuentre una forma perfecta de decirte
-todo lo que significas para mí, pero quería intentarlo.
-</p>
-
-<div class="letter">
-
-<p>
-ángel,
-</p>
-
-<p>
-quería hacerte algo diferente. algo que pudieras guardar,
-volver a mirar algún día y que te recordara un poquito de mí.
-</p>
-
-<p>
-hay personas que llegan a nuestra vida y simplemente se
-convierten en parte de ella sin que uno se dé cuenta
-exactamente en qué momento ocurrió.
-</p>
-
-<p>
-tú eres una de esas personas para mí.
-</p>
-
-<p>
-gracias por cada conversación, cada risa, cada momento
-bonito y también por todas esas pequeñas cosas que quizá
-para ti parecen insignificantes, pero que yo recuerdo.
-</p>
-
-<p>
-no sé qué nos depare el futuro, pero sí sé que me alegra
-muchísimo haber coincidido contigo.
-</p>
-
-<p>
-y si alguna vez dudas de lo importante que eres para mí,
-vuelve aquí.
-</p>
-
-<p>
-porque hice esto para que pudieras recordarlo.
-</p>
-
-<div class="signature">
-con cariño,<br>
-zul ♡
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- FOTOS -->
-
-<section class="gallery-section">
-
-<div class="container">
-
-<h2 class="section-title">
-nuestros momentos
-</h2>
-
-<p class="section-subtitle">
-algunas imágenes que quiero guardar aquí.
-</p>
-
-<div class="gallery">
-
-<!-- CAMBIA ESTAS IMÁGENES POR LAS TUYAS -->
-
-<div class="photo">
-<img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=800&q=80" alt="momento">
-</div>
-
-<div class="photo">
-<img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=800&q=80" alt="momento">
-</div>
-
-<div class="photo">
-<img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=800&q=80" alt="momento">
-</div>
-
-<div class="photo">
-<img src="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?auto=format&fit=crop&w=800&q=80" alt="momento">
-</div>
-
-<div class="photo">
-<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="momento">
-</div>
-
-<div class="photo">
-<img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=800&q=80" alt="momento">
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- RECUERDOS -->
+<!-- =====================================================
+SUS GUSTOS
+===================================================== -->
 
 <section>
 
 <div class="container">
 
 <h2 class="section-title">
-pequeñas cosas
+cosas que sé de ti
 </h2>
 
-<p class="section-subtitle">
-porque muchas veces son esas cosas pequeñas las que terminan
-significando muchísimo.
+<p class="section-description">
+
+probablemente podría preguntarte cuáles son tus cosas
+favoritas, pero me gusta más demostrarte que presto atención.
+
 </p>
 
-<div class="memories">
 
-<div class="memory">
+<div class="likes-grid">
 
-<div class="memory-number">01</div>
 
-<h3>las conversaciones</h3>
+<div class="like-card" onclick="likeClick('ariana')">
+
+<div class="like-icon">🎤</div>
+
+<h3>Ariana Grande</h3>
 
 <p>
-esas conversaciones que empiezan hablando de cualquier
-cosa y terminan siendo de esas que uno quisiera guardar
-para siempre..eres mi mejor recuerdo.
+porque obviamente esto tenía que estar aquí.
 </p>
 
 </div>
 
 
-<div class="memory">
+<div class="like-card" onclick="likeClick('cine')">
 
-<div class="memory-number">02</div>
+<div class="like-icon">🎬</div>
 
-<h3>las risas</h3>
+<h3>el cine</h3>
 
 <p>
-porque definitivamente hay personas con las que reírse
-se siente diferente.
+historias que duran unas horas y luego se quedan contigo.
 </p>
 
 </div>
 
 
-<div class="memory">
+<div class="like-card" onclick="likeClick('sushi')">
 
-<div class="memory-number">03</div>
+<div class="like-icon">🍣</div>
 
-<h3>los detalles</h3>
+<h3>sushi</h3>
 
 <p>
-esas pequeñas cosas que quizá haces sin pensarlo,
-pero que yo termino recordando mucho más de lo que imaginas.
+probablemente una forma bastante buena de sobornarte.
 </p>
 
 </div>
 
 
-<div class="memory">
+<div class="like-card" onclick="likeClick('tattoos')">
 
-<div class="memory-number">04</div>
+<div class="like-icon">🖋️</div>
 
-<h3>tú</h3>
+<h3>tatuajes</h3>
 
 <p>
-probablemente mi parte favorita de todo esto.
+cosas pequeñas que pueden quedarse para siempre.
 </p>
 
 </div>
+
+
+<div class="like-card" onclick="likeClick('bts')">
+
+<div class="like-icon">💜</div>
+
+<h3>BTS</h3>
+
+<p>
+no iba a cometer el error de dejar esto fuera.
+</p>
+
+</div>
+
+
+<div class="like-card" onclick="likeClick('snoopy')">
+
+<div class="like-icon">🐶</div>
+
+<h3>Snoopy</h3>
+
+<p>
+este tiene algo escondido.
+</p>
+
+</div>
+
 
 </div>
 
@@ -627,59 +1221,435 @@ probablemente mi parte favorita de todo esto.
 </section>
 
 
-<!-- RAZONES -->
+<!-- =====================================================
+CINE
+===================================================== -->
 
-<section class="reasons-section">
+<section>
+
+<div class="container">
+
+<div class="cinema">
+
+<small>
+CINE — FUNCIÓN ESPECIAL
+</small>
+
+<h3>
+una historia que todavía no termina
+</h3>
+
+<p>
+protagonista: ángel
+<br>
+espectadora: zul
+</p>
+
+<div class="ticket" onclick="openMovie()">
+
+🎟️ tocar para abrir el boleto
+
+</div>
+
+<p id="movieSecret">
+
+entrada válida para una función que no sé cuánto dure,
+pero que me alegra muchísimo estar viendo.
+
+🩵
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+SUSHI
+===================================================== -->
+
+<section>
 
 <div class="container">
 
 <h2 class="section-title">
-algunas razones
+el menú de mi ángel
 </h2>
 
-<p class="section-subtitle">
-no son todas. ni siquiera cerca.
+<p class="section-description">
+
+selecciona una pieza.
+
+no prometo que sea sushi real.
+
 </p>
 
-<div class="reasons">
 
-<div class="reason">
-<span class="reason-heart">♡</span>
-<p>
-porque contigo puedo ser yo sin tener que pensar demasiado
-en cómo debería comportarme.
-</p>
+<div class="sushi-grid">
+
+<div class="sushi" onclick="sushiClick(1)">
+🍣
 </div>
 
-<div class="reason">
-<span class="reason-heart">♡</span>
-<p>
-porque haces que incluso las conversaciones más simples
-tengan algo especial.
-</p>
+<div class="sushi" onclick="sushiClick(2)">
+🍙
 </div>
 
-<div class="reason">
-<span class="reason-heart">♡</span>
-<p>
-porque tienes una manera muy tuya de hacerte importante
-sin siquiera intentarlo.
-</p>
+<div class="sushi" onclick="sushiClick(3)">
+🥢
 </div>
 
-<div class="reason">
-<span class="reason-heart">♡</span>
-<p>
-porque cuando pienso en algunos de mis recuerdos favoritos,
-inevitablemente apareces tú.
-</p>
+<div class="sushi" onclick="sushiClick(4)">
+🍱
 </div>
 
-<div class="reason">
-<span class="reason-heart">♡</span>
-<p>
-y porque, simplemente, me alegra que seas parte de mi vida.
+</div>
+
+<div id="sushiMessage"></div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+ARIANA
+===================================================== -->
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+una canción para ti
+</h2>
+
+<p class="section-description">
+
+no voy a fingir que puedo competir con Ariana.
+
+claramente no puedo.
+
 </p>
+
+
+<div class="music-card">
+
+<div class="record">
+
+<div class="record-center"></div>
+
+</div>
+
+<h3>
+si esto fuera una canción...
+</h3>
+
+<p>
+
+probablemente sería una de esas que escuchas una vez
+y después cada vez que suena te acuerdas de alguien.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+TATUAJES
+===================================================== -->
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+cosas que podrían quedarse
+</h2>
+
+<p class="section-description">
+
+toca los pequeños símbolos.
+
+algunos tienen algo que decir.
+
+</p>
+
+
+<div class="tattoo-area">
+
+
+<div class="tattoo" onclick="tattooClick(1)">
+
+<div class="tattoo-symbol">✦</div>
+
+<strong>uno</strong>
+
+<p class="tattoo-message" id="tattoo1">
+
+por todas las veces que hiciste que un día normal
+se sintiera un poquito menos normal.
+
+</p>
+
+</div>
+
+
+<div class="tattoo" onclick="tattooClick(2)">
+
+<div class="tattoo-symbol">☾</div>
+
+<strong>dos</strong>
+
+<p class="tattoo-message" id="tattoo2">
+
+por las conversaciones que probablemente nunca
+imaginaste que yo iba a recordar.
+
+</p>
+
+</div>
+
+
+<div class="tattoo" onclick="tattooClick(3)">
+
+<div class="tattoo-symbol">♡</div>
+
+<strong>tres</strong>
+
+<p class="tattoo-message" id="tattoo3">
+
+por todo aquello que no sé explicar,
+pero que sé que siento.
+
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+BTS
+===================================================== -->
+
+<section class="bts-section">
+
+<div class="container">
+
+<h2 class="section-title">
+obviamente tenía que estar BTS
+</h2>
+
+<p class="section-description">
+
+y como sé que esto te gusta,
+escondí algo aquí.
+
+</p>
+
+
+<div class="purple-heart" onclick="btsClick()">
+
+🩵
+
+</div>
+
+
+<p id="btsSecret">
+
+encontraste nuestro corazón.
+
+<br><br>
+
+supongo que ya sabes que cuando alguien me importa,
+termino aprendiendo las pequeñas cosas que le gustan.
+
+<br><br>
+
+y contigo...
+
+me gusta hacerlo.
+
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+GALERÍA
+
+PUEDES CAMBIAR ESTAS FOTOS DESPUÉS.
+
+Solo cambia:
+
+foto1.jpg
+foto2.jpg
+etc.
+===================================================== -->
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+recuerdos
+</h2>
+
+<p class="section-description">
+
+aquí puedes poner nuestras fotos,
+capturas, momentos favoritos o cualquier cosa
+que quieras guardar.
+
+</p>
+
+
+<div class="gallery">
+
+
+<div class="photo">
+
+<img src="foto1.jpg" alt="recuerdo 1">
+
+</div>
+
+
+<div class="photo">
+
+<img src="foto2.jpg" alt="recuerdo 2">
+
+</div>
+
+
+<div class="photo">
+
+<img src="foto3.jpg" alt="recuerdo 3">
+
+</div>
+
+
+<div class="photo">
+
+<img src="foto4.jpg" alt="recuerdo 4">
+
+</div>
+
+
+<div class="photo">
+
+<img src="foto5.jpg" alt="recuerdo 5">
+
+</div>
+
+
+<div class="photo">
+
+<img src="foto6.jpg" alt="recuerdo 6">
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =====================================================
+AGRADECIMIENTO
+===================================================== -->
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+antes de terminar...
+</h2>
+
+
+<div class="thanks">
+
+<div class="thanks-text">
+
+<p>
+
+también quería aprovechar este pequeño espacio
+para decirte algo que a veces no digo lo suficiente.
+
+</p>
+
+<br>
+
+<p>
+
+<strong>gracias.</strong>
+
+</p>
+
+<br>
+
+<p>
+
+gracias por estar para mí.
+
+<br>
+
+gracias por escucharme.
+
+<br>
+
+gracias por las veces que me hiciste reír.
+
+<br>
+
+gracias por cada conversación.
+
+<br>
+
+gracias por tu paciencia.
+
+<br>
+
+gracias por los detalles que quizá tú olvidaste
+pero que yo sí recuerdo.
+
+</p>
+
+<br>
+
+<p>
+
+gracias por haber llegado a mi vida y por todas
+las cosas que has hecho por mí, nunca me cansaria de agradecerte.
+
+</p>
+
+<br>
+
+<p>
+
+quizá no siempre sé cómo devolver todo eso,
+pero quiero que sepas que <strong>lo valoro muchísimo.</strong>
+
+</p>
+
 </div>
 
 </div>
@@ -689,29 +1659,216 @@ y porque, simplemente, me alegra que seas parte de mi vida.
 </section>
 
 
-<!-- FINAL -->
+<!-- =====================================================
+SNOOPY
+===================================================== -->
 
-<section class="final-section">
+<div class="snoopy" onclick="snoopyClick()">
 
-<div class="final-content">
+🐶
+
+</div>
+
+
+<div id="snoopyMessage">
+
+encontraste a Snoopy. 🐶
+
+<br><br>
+
+sabía que ibas a encontrarlo.
+
+<br><br>
+
++1 punto por ser tú.
+
+</div>
+
+
+<!-- =====================================================
+CONFESIÓN
+===================================================== -->
+
+<section class="final">
+
+<div class="locked">
+
+<div class="lock">
+🔐
+</div>
+
+<h2 class="section-title">
+
+todavía falta una cosa...
+
+</h2>
+
+<p class="section-description">
+
+creo que para llegar hasta aquí tenías que encontrar
+algunas cosas primero.
+
+<br><br>
+
+y ahora sí puedo decirte algo.
+
+</p>
+
+
+<button class="start-button" onclick="revealConfession()">
+
+abrir
+
+</button>
+
+
+<div class="final-message" id="confession">
 
 <h2>
-y eso es todo...
+encontraste todo.
 </h2>
 
+
 <p>
-aunque en realidad no lo es.
-<br><br>
-porque podría escribir muchísimo más y aun así sentir que
-me faltaron cosas por decir.
-<br><br>
-así que por ahora solo voy a dejar esto aquí:
-<br><br>
-<strong>gracias por existir en mi vida, ángel.</strong>
+
+aunque, si soy sincera,
+creo que desde el principio quería que llegaras hasta aquí.
+
 </p>
 
-<div class="big-heart">
-♡
+
+<p>
+
+podría decir que hice esta página porque quería hacerte
+algo bonito.
+
+<br>
+
+que me acordé de tus gustos.
+
+<br>
+
+que me pareció divertido esconderte cosas o por que simplemente es tu cumpleaños.
+
+</p>
+
+
+<p>
+
+pero creo que la verdad es un poquito más que eso.
+
+</p>
+
+
+<div class="confession">
+
+me gustas.
+
+</div>
+
+
+<p>
+
+y supongo que cuando alguien te gusta,
+empiezas a prestar atención a cosas que normalmente
+dejarías pasar.
+
+</p>
+
+
+<p>
+
+sé que te gusta Ariana Grande.
+
+<br>
+
+sé que te gusta el cine.
+
+<br>
+
+sé que te gusta el sushi.
+
+<br>
+
+sé de tus tatuajes.
+
+<br>
+
+sé que BTS tiene su lugar seguro.
+
+<br>
+
+y sé que Snoopy tenía que aparecer sí o sí.
+
+</p>
+
+
+<p>
+
+y quizá lo bonito de todo es que
+<strong>no tuve que esforzarme por recordarlo.</strong>
+
+</p>
+
+
+<p>
+
+simplemente me acuerdo de ti.
+
+</p>
+
+
+<p>
+
+así que sí...
+
+</p>
+
+
+<div class="confession">
+
+todo esto lo hice porque me gustas.
+
+</div>
+
+
+<p>
+
+y porque quería que, aunque fuera por unos minutos,
+pudieras ver cuánto me gusta conocerte.
+
+</p>
+
+
+<div class="confession">
+
+supongo que este era mi intento bastante elaborado
+de decirte que me gustas sin tener que decirlo.
+
+</div>
+
+
+<div class="blue-heart">
+
+🩵
+
+</div>
+
+
+<p>
+
+feliz día, ángel.
+
+<br><br>
+
+con cariño,
+
+<br>
+
+zul.
+
+</p>
+
 </div>
 
 </div>
@@ -719,10 +1876,155 @@ así que por ahora solo voy a dejar esto aquí:
 </section>
 
 
-<footer>
-hecho con cariño por zul ♡
-</footer>
+<!-- =====================================================
+JAVASCRIPT
+AQUÍ VIVEN LAS INTERACCIONES
+===================================================== -->
+
+<script>
+
+
+/* PORTADA */
+
+function startPage() {
+
+document.getElementById("introMessage").style.display = "block";
+
+}
+
+
+/* TARJETAS DE GUSTOS */
+
+function likeClick(type) {
+
+let messages = {
+
+ariana:
+"sí, sí... sé perfectamente que Ariana tenía que estar aquí. ♡",
+
+cine:
+"si algún día hacemos una película, espero que tenga un final bonito.",
+
+sushi:
+"esto probablemente sea una invitación bastante descarada a comer sushi algún día.",
+
+tattoos:
+"me parece bonito que algunas cosas puedan quedarse contigo para siempre.",
+
+bts:
+"tranquila, no iba a hacer una página para ti y olvidarme de BTS. 💜",
+
+snoopy:
+"👀 no deberías confiar en una tarjeta que te dice que tiene algo escondido."
+
+};
+
+alert(messages[type]);
+
+}
+
+
+/* CINE */
+
+function openMovie() {
+
+document.getElementById("movieSecret").style.display = "block";
+
+}
+
+
+/* SUSHI */
+
+function sushiClick(number) {
+
+let messages = [
+
+"buena elección. 🍣",
+
+"esto cuenta como una invitación a sushi, ¿no?",
+
+"no sé cocinar sushi, pero podría intentarlo por ti.",
+
+"okay, esa era mi favorita. 🩵"
+
+];
+
+document.getElementById("sushiMessage").innerText =
+messages[number - 1];
+
+}
+
+
+/* TATUAJES */
+
+function tattooClick(number) {
+
+let message =
+document.getElementById("tattoo" + number);
+
+if (message.style.display === "block") {
+
+message.style.display = "none";
+
+} else {
+
+message.style.display = "block";
+
+}
+
+}
+
+
+/* BTS */
+
+function btsClick() {
+
+document.getElementById("btsSecret").style.display = "block";
+
+}
+
+
+/* SNOOPY */
+
+function snoopyClick() {
+
+let message =
+document.getElementById("snoopyMessage");
+
+if (message.style.display === "block") {
+
+message.style.display = "none";
+
+} else {
+
+message.style.display = "block";
+
+}
+
+}
+
+
+/* CONFESIÓN */
+
+function revealConfession() {
+
+document.getElementById("confession").style.display = "block";
+
+document.querySelector(".locked .lock").style.display = "none";
+
+document.querySelector(".locked .section-title").style.display = "none";
+
+document.querySelector(".locked .section-description").style.display = "none";
+
+document.querySelector(".locked .start-button").style.display = "none";
+
+}
+
+
+</script>
 
 
 </body>
+
 </html>
+
