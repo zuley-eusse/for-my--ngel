@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>para ángel ♡</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+background: #fff7fb;
+color: #4a3942;
+font-family: 'Poppins', sans-serif;
+overflow-x: hidden;
+}
+
+/* CORAZONES FLOTANDO */
+
+.heart {
+position: fixed;
+bottom: -30px;
+font-size: 18px;
+opacity: 0.45;
+animation: floatUp 8s linear infinite;
+pointer-events: none;
+z-index: 0;
+}
+
+.heart:nth-child(1) {
+left: 10%;
+animation-delay: 0s;
+}
+
+.heart:nth-child(2) {
+left: 30%;
+animation-delay: 2s;
+}
+
+.heart:nth-child(3) {
+left: 55%;
+animation-delay: 4s;
+}
+
+.heart:nth-child(4) {
+left: 80%;
+animation-delay: 1s;
+}
+
+@keyframes floatUp {
+0% {
+transform: translateY(0) scale(1);
+opacity: 0;
+}
+
+20% {
+opacity: 0.5;
+}
+
+100% {
+transform: translateY(-110vh) scale(1.4);
+opacity: 0;
+}
+}
+
+/* PORTADA */
+
+.hero {
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+padding: 40px 25px;
+position: relative;
+background:
+radial-gradient(circle at top left, #ffdce9 0%, transparent 35%),
+radial-gradient(circle at bottom right, #f5d9ff 0%, transparent 35%),
+#fff7fb;
+}
+
+.hero-content {
+max-width: 800px;
+z-index: 1;
+}
+
+.small-text {
+font-size: 14px;
+letter-spacing: 3px;
+text-transform: uppercase;
+color: #a76d84;
+margin-bottom: 18px;
+}
+
+h1 {
+font-family: 'DM Serif Display', serif;
+font-size: clamp(60px, 13vw, 120px);
+font-weight: 400;
+line-height: 0.95;
+color: #533944;
+margin-bottom: 25px;
+}
+
+.hero p {
+font-size: 17px;
+line-height: 1.8;
+max-width: 580px;
+margin: auto;
+color: #755d67;
+}
+
+.scroll {
+display: inline-block;
+margin-top: 45px;
+color: #9b687e;
+text-decoration: none;
+font-size: 13px;
+letter-spacing: 2px;
+animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+0%, 100% {
+transform: translateY(0);
+}
+
+50% {
+transform: translateY(7px);
+}
+}
+
+/* SECCIONES */
+
+section {
+padding: 100px 25px;
+position: relative;
+z-index: 1;
+}
+
+.container {
+max-width: 950px;
+margin: auto;
+}
+
+.section-title {
+text-align: center;
+font-family: 'DM Serif Display', serif;
+font-size: 50px;
+font-weight: 400;
+color: #533944;
+margin-bottom: 20px;
+}
+
+.section-subtitle {
+text-align: center;
+max-width: 600px;
+margin: 0 auto 55px;
+color: #816a73;
+line-height: 1.8;
+}
+
+/* CARTA */
+
+.letter-section {
+background: #fff;
+}
+
+.letter {
+max-width: 720px;
+margin: auto;
+background: #fffafc;
+padding: 55px;
+border-radius: 25px;
+box-shadow: 0 15px 45px rgba(113, 74, 91, 0.10);
+border: 1px solid #f4dfe8;
+line-height: 2;
+font-size: 16px;
+}
+
+.letter p {
+margin-bottom: 22px;
+}
+
+.signature {
+font-family: 'DM Serif Display', serif;
+font-size: 32px;
+color: #9b6179;
+margin-top: 30px;
+}
+
+/* GALERÍA */
+
+.gallery-section {
+background: #fff7fb;
+}
+
+.gallery {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 18px;
+}
+
+.photo {
+aspect-ratio: 1 / 1;
+border-radius: 20px;
+overflow: hidden;
+background: #f5dfe8;
+box-shadow: 0 10px 25px rgba(113, 74, 91, 0.08);
+}
+
+.photo img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+transition: transform 0.5s ease;
+}
+
+.photo:hover img {
+transform: scale(1.06);
+}
+
+/* RECUERDOS */
+
+.memories {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 25px;
+}
+
+.memory {
+background: white;
+border-radius: 25px;
+padding: 35px;
+border: 1px solid #f1dfe6;
+box-shadow: 0 12px 35px rgba(113, 74, 91, 0.07);
+}
+
+.memory-number {
+font-family: 'DM Serif Display', serif;
+font-size: 38px;
+color: #c0849b;
+margin-bottom: 10px;
+}
+
+.memory h3 {
+font-size: 19px;
+font-weight: 500;
+margin-bottom: 12px;
+color: #593f49;
+}
+
+.memory p {
+color: #806c74;
+line-height: 1.8;
+font-size: 14px;
+}
+
+/* RAZONES */
+
+.reasons-section {
+background: #fff;
+}
+
+.reasons {
+max-width: 700px;
+margin: auto;
+}
+
+.reason {
+display: flex;
+gap: 20px;
+align-items: flex-start;
+padding: 22px 0;
+border-bottom: 1px solid #f0dfe6;
+}
+
+.reason:last-child {
+border-bottom: none;
+}
+
+.reason-heart {
+font-size: 22px;
+flex-shrink: 0;
+}
+
+.reason p {
+line-height: 1.8;
+color: #725d66;
+}
+
+/* FINAL */
+
+.final-section {
+min-height: 80vh;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+background:
+radial-gradient(circle at center, #f7dce8 0%, #fff7fb 60%);
+}
+
+.final-content {
+max-width: 700px;
+}
+
+.final-content h2 {
+font-family: 'DM Serif Display', serif;
+font-size: clamp(48px, 9vw, 85px);
+font-weight: 400;
+color: #533944;
+margin-bottom: 25px;
+}
+
+.final-content p {
+line-height: 1.9;
+color: #765f68;
+font-size: 16px;
+}
+
+.big-heart {
+font-size: 55px;
+margin-top: 35px;
+display: inline-block;
+animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+0%, 100% {
+transform: scale(1);
+}
+
+15% {
+transform: scale(1.15);
+}
+
+30% {
+transform: scale(1);
+}
+
+45% {
+transform: scale(1.12);
+}
+}
+
+footer {
+text-align: center;
+padding: 25px;
+background: #fff7fb;
+color: #a1848f;
+font-size: 12px;
+letter-spacing: 1px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 700px) {
+
+section {
+padding: 75px 20px;
+}
+
+.letter {
+padding: 30px 25px;
+}
+
+.gallery {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.memories {
+grid-template-columns: 1fr;
+}
+
+.section-title {
+font-size: 42px;
+}
+
+.hero p {
+font-size: 15px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<!-- CORAZONES -->
+
+<div class="heart">♡</div>
+<div class="heart">♡</div>
+<div class="heart">♡</div>
+<div class="heart">♡</div>
+
+
+<!-- PORTADA -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<div class="small-text">
+una pequeña cosa para ti
+</div>
+
+<h1>ángel</h1>
+
+<p>
+hice este pequeño rincón porque hay personas que merecen
+tener un lugar bonito donde recordar todo lo que significan.
+</p>
+
+<a href="#carta" class="scroll">
+↓ sigue leyendo
+</a>
+
+</div>
+
+</section>
+
+
+<!-- CARTA -->
+
+<section class="letter-section" id="carta">
+
+<div class="container">
+
+<h2 class="section-title">
+para ti
+</h2>
+
+<p class="section-subtitle">
+probablemente nunca encuentre una forma perfecta de decirte
+todo lo que significas para mí, pero quería intentarlo.
+</p>
+
+<div class="letter">
+
+<p>
+ángel,
+</p>
+
+<p>
+quería hacerte algo diferente. algo que pudieras guardar,
+volver a mirar algún día y que te recordara un poquito de mí.
+</p>
+
+<p>
+hay personas que llegan a nuestra vida y simplemente se
+convierten en parte de ella sin que uno se dé cuenta
+exactamente en qué momento ocurrió.
+</p>
+
+<p>
+tú eres una de esas personas para mí.
+</p>
+
+<p>
+gracias por cada conversación, cada risa, cada momento
+bonito y también por todas esas pequeñas cosas que quizá
+para ti parecen insignificantes, pero que yo recuerdo.
+</p>
+
+<p>
+no sé qué nos depare el futuro, pero sí sé que me alegra
+muchísimo haber coincidido contigo.
+</p>
+
+<p>
+y si alguna vez dudas de lo importante que eres para mí,
+vuelve aquí.
+</p>
+
+<p>
+porque hice esto para que pudieras recordarlo.
+</p>
+
+<div class="signature">
+con cariño,<br>
+zul ♡
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOTOS -->
+
+<section class="gallery-section">
+
+<div class="container">
+
+<h2 class="section-title">
+nuestros momentos
+</h2>
+
+<p class="section-subtitle">
+algunas imágenes que quiero guardar aquí.
+</p>
+
+<div class="gallery">
+
+<!-- CAMBIA ESTAS IMÁGENES POR LAS TUYAS -->
+
+<div class="photo">
+<img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=800&q=80" alt="momento">
+</div>
+
+<div class="photo">
+<img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=800&q=80" alt="momento">
+</div>
+
+<div class="photo">
+<img src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=800&q=80" alt="momento">
+</div>
+
+<div class="photo">
+<img src="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?auto=format&fit=crop&w=800&q=80" alt="momento">
+</div>
+
+<div class="photo">
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="momento">
+</div>
+
+<div class="photo">
+<img src="https://images.unsplash.com/photo-1511988617509-a57c8a288659?auto=format&fit=crop&w=800&q=80" alt="momento">
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- RECUERDOS -->
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+pequeñas cosas
+</h2>
+
+<p class="section-subtitle">
+porque muchas veces son esas cosas pequeñas las que terminan
+significando muchísimo.
+</p>
+
+<div class="memories">
+
+<div class="memory">
+
+<div class="memory-number">01</div>
+
+<h3>las conversaciones</h3>
+
+<p>
+esas conversaciones que empiezan hablando de cualquier
+cosa y terminan siendo de esas que uno quisiera guardar
+para siempre..eres mi mejor recuerdo.
+</p>
+
+</div>
+
+
+<div class="memory">
+
+<div class="memory-number">02</div>
+
+<h3>las risas</h3>
+
+<p>
+porque definitivamente hay personas con las que reírse
+se siente diferente.
+</p>
+
+</div>
+
+
+<div class="memory">
+
+<div class="memory-number">03</div>
+
+<h3>los detalles</h3>
+
+<p>
+esas pequeñas cosas que quizá haces sin pensarlo,
+pero que yo termino recordando mucho más de lo que imaginas.
+</p>
+
+</div>
+
+
+<div class="memory">
+
+<div class="memory-number">04</div>
+
+<h3>tú</h3>
+
+<p>
+probablemente mi parte favorita de todo esto.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- RAZONES -->
+
+<section class="reasons-section">
+
+<div class="container">
+
+<h2 class="section-title">
+algunas razones
+</h2>
+
+<p class="section-subtitle">
+no son todas. ni siquiera cerca.
+</p>
+
+<div class="reasons">
+
+<div class="reason">
+<span class="reason-heart">♡</span>
+<p>
+porque contigo puedo ser yo sin tener que pensar demasiado
+en cómo debería comportarme.
+</p>
+</div>
+
+<div class="reason">
+<span class="reason-heart">♡</span>
+<p>
+porque haces que incluso las conversaciones más simples
+tengan algo especial.
+</p>
+</div>
+
+<div class="reason">
+<span class="reason-heart">♡</span>
+<p>
+porque tienes una manera muy tuya de hacerte importante
+sin siquiera intentarlo.
+</p>
+</div>
+
+<div class="reason">
+<span class="reason-heart">♡</span>
+<p>
+porque cuando pienso en algunos de mis recuerdos favoritos,
+inevitablemente apareces tú.
+</p>
+</div>
+
+<div class="reason">
+<span class="reason-heart">♡</span>
+<p>
+y porque, simplemente, me alegra que seas parte de mi vida.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FINAL -->
+
+<section class="final-section">
+
+<div class="final-content">
+
+<h2>
+y eso es todo...
+</h2>
+
+<p>
+aunque en realidad no lo es.
+<br><br>
+porque podría escribir muchísimo más y aun así sentir que
+me faltaron cosas por decir.
+<br><br>
+así que por ahora solo voy a dejar esto aquí:
+<br><br>
+<strong>gracias por existir en mi vida, ángel.</strong>
+</p>
+
+<div class="big-heart">
+♡
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+hecho con cariño por zul ♡
+</footer>
+
+
+</body>
+</html>
